@@ -5,11 +5,9 @@ env:
 
 on:
   repository_dispatch:
-    types: [run-Runner]
+    types: 
+      - quip_script
 jobs:
   Runner: 
     runs-on: ubunut-latest
-    steps:
-    - uses: actions/checkout@v2 
-    - name: Quip Scrips
-      run: python main.py
+    run: quip-script
