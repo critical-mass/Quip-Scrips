@@ -1,4 +1,7 @@
-name: Run the quip actioin scripts 
+name: Run the quip actioin scripts
+env: 
+  owner: critical-mass
+  repo: Quip-Scripts
 
 on:
   repository_dispatch:
