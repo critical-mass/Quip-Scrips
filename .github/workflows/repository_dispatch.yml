@@ -1,0 +1,12 @@
+name: Run the quip actioin scripts 
+
+on:
+  repository_dispatch:
+    types: do-something
+jobs:
+  build:
+    name: run quip action
+    runs-on: ubuntu-latest
+    steps:
+      - name: run main script
+        run: main.py
