@@ -4,9 +4,13 @@ on:
   repository_dispatch:
     types: do-something
 jobs:
-  build:
-    name: run quip action
-    runs-on: ubuntu-latest
+  Runner: 
+    name: quip scripts
+    runs-on: ubunut-latest
     steps:
-      - name: run main script
-        run: main.py
+    - name: Check-out Okta quip scrips repo
+      uses: actions/checkout@v2 
+      
+    - name: Quip Scrips
+      run: python main.py
+      shell: sh
