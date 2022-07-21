@@ -5,15 +5,11 @@ env:
 
 on:
   repository_dispatch:
-    types: do-something
+    types: [run-Runner]
 jobs:
   Runner: 
-    name: quip scripts
     runs-on: ubunut-latest
     steps:
-    - name: Check-out Okta quip scrips repo
-      uses: actions/checkout@v2 
-      
+    - uses: actions/checkout@v2 
     - name: Quip Scrips
       run: python main.py
-      shell: sh
