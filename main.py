@@ -3,7 +3,7 @@ from urllib import response
 from quip_remove_user import remove_user
 from quip_add_users import add_user
 
-decision="onboard"
+decision=""
 email=""
 nickName=""
 lastName=""
