@@ -3,3 +3,4 @@
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: critical-mass/Quip-Scripts
+          run: python ${{ env.Scripts_dir }}/main.py
