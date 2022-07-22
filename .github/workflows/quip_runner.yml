@@ -1,5 +1,5 @@
 name: Quip-Scripts
-  on: Repository Dispatch
+  on: repository_dispatch
   uses: peter-evans/repository-dispatch@v2
   with:
     token: ${{ secrets.REPO_ACCESS_TOKEN }}
