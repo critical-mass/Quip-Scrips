@@ -1,4 +1,5 @@
-- name: Repository Dispatch
+name: name of workflow
+        on: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
