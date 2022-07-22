@@ -1,14 +1,17 @@
 name: Quip-Scripts
+
 on: 
-  repository_dispatch:
-    types: quip 
-uses: peter-evans/repository-dispatch@v2
-with:
-  token: ${{ secrets.REPO_ACCESS_TOKEN }}
-  repository: critical-mass/Quip-Scripts
-  jobs:
+   repository_dispatch:
+      types: quip 
+    uses: peter-evans/repository-dispatch@v2
+    with:
+      token: ${{ secrets.REPO_ACCESS_TOKEN }}
+      repository: critical-mass/Quip-Scripts
+jobs:
+  build:
+    name: Quip Scripts
     runs-on: ubuntu-latest
-    steps:
-  - name: Quip Scrips
-    repository: critical-mass/Quip-Scripts
-    run: main.py
+  steps:
+    - name: Quip Scrips
+        repository: critical-mass/Quip-Scripts
+        run: main.py
