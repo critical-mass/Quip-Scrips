@@ -1,7 +1,12 @@
 name: name of workflow
-        on: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: critical-mass/Quip-Scripts
-          run: python main.py
+  on: Repository Dispatch
+  uses: peter-evans/repository-dispatch@v2
+  with:
+    token: ${{ secrets.REPO_ACCESS_TOKEN }}
+    repository: critical-mass/Quip-Scripts
+  jobs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Quip Scrips
+      repository: critical-mass/Quip-Scripts
+      run: main.py
