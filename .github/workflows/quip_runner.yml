@@ -3,9 +3,9 @@ on:
   repository_dispatch:
     types: quip 
 uses: peter-evans/repository-dispatch@v2
-  with:
-    token: ${{ secrets.REPO_ACCESS_TOKEN }}
-    repository: critical-mass/Quip-Scripts
+with:
+  token: ${{ secrets.REPO_ACCESS_TOKEN }}
+  repository: critical-mass/Quip-Scripts
   jobs:
     runs-on: ubuntu-latest
     steps:
