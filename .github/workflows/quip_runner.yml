@@ -1,4 +1,4 @@
-name: name of workflow
+name: Quip-Scripts
   on: Repository Dispatch
   uses: peter-evans/repository-dispatch@v2
   with:
