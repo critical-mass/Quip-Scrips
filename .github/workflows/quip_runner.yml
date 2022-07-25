@@ -14,7 +14,10 @@ jobs:
           uses: actions/checkout@v2
           with:
             repository: critical-mass/Quip-Scripts
-          
+  
         - name: Running main.py
-          run: python main.py
-          shell: sh
+          uses: actions/setup-python@v3
+          with: 
+            python-version: '3.9'
+            check-latest: true
+        - run: python main.py
