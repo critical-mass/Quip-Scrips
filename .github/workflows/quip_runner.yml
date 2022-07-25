@@ -19,5 +19,4 @@ jobs:
           uses: actions/setup-python@v3
           with: 
             python-version: '3.9'
-            check-latest: true
         - run: python main.py
