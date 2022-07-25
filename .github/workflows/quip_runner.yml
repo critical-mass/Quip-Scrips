@@ -16,5 +16,5 @@ jobs:
             repository: critical-mass/Quip-Scripts
           
         - name: Running main.py
-          run: python ${{ env.repo_dir }}/main.py
+          run: python main.py
           shell: sh
