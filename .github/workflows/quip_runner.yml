@@ -1,7 +1,8 @@
 name: Quip Runner
 
 on:
-  push
+  repository_dispatch:
+    types: payload
 env: 
   repo_dir: Quip-Scripts
 
