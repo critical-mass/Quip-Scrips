@@ -1,14 +1,21 @@
-name: Quip-Scripts
-on: 
-  repository_dispatch:
-    types: quip
+name: Quip Runner
+
+on:
+  push
+env: 
+  repo_dir: Quip-Scripts
+
 jobs:
-  build:
-    name: Quip Scripts
-    runs-on: ubuntu-latest
-  steps:
-   - name: Quip Scrips
-    with:
-    token: ${{ secrets.REPO_ACCESS_TOKEN }}
-      repository: critical-mass/Quip-Scripts
-      run: main.py
+    entireJob:
+        name: Quip Add/Remove User Script
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout repo 
+          uses: actions/checkout@v2
+          with:
+            repository: cirtical-mass/Quip-Scripts
+            token: ${{ secrets.REPO_ACCESS_TOKEN }}
+            path: ${{ env.repo_dir }}
+        - name: Running main.py
+          run: python ${{ env.repo_dir }}/main.py
+          shell: sh
