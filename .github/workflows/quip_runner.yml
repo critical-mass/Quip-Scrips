@@ -12,10 +12,7 @@ jobs:
         steps:
         - name: Checkout repo 
           uses: actions/checkout@v2
-          with:
-            repository: cirtical-mass/Quip-Scripts
-            token: ${{ secrets.REPO_ACCESS_TOKEN }}
-            path: ${{ env.repo_dir }}
+          
         - name: Running main.py
           run: python ${{ env.repo_dir }}/main.py
           shell: sh
