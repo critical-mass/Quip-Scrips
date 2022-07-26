@@ -22,4 +22,4 @@ jobs:
             python-version: '3.9'
         - run: pip install -r requirements.txt
         - run: python main.py
-        - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
+        - run: echo "payload: ${{ toJson(github.event.client_payload) }}"
