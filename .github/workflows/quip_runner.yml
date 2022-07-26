@@ -15,7 +15,7 @@ jobs:
           uses: actions/checkout@v2
           with:
             repository: critical-mass/Quip-Scripts
-        - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
+        - run: 'echo "payload: ${{ toJson(github.event.client_payload.message) }}"'
         - name: Running main.py
           uses: actions/setup-python@v3
           with: 
