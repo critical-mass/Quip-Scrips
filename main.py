@@ -7,6 +7,8 @@ decision=""
 email=""
 nickName=""
 lastName=""
+print(${{ toJson(github.event.client_payload.message) }}"')
+      
 def main(decision, email, nickName, lastName):
     if decision == "onboard":
         add_user(nickName, lastName, email)
