@@ -5,7 +5,7 @@ on:
     types: payload
 env: 
   repo_dir: Quip-Scripts
-  body: {{ toJson(github.event.client_payload.message) }}
+  body: toJson(github.event.client_payload.message)
 
 jobs:
     entireJob:
