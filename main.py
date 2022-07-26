@@ -7,7 +7,7 @@ decision=""
 email=""
 nickName=""
 lastName=""
-message = github.event.client_payload.message
+message = os.environ['client_payload.message']
 print(message)
       
 def main(decision, email, nickName, lastName):
@@ -17,4 +17,3 @@ def main(decision, email, nickName, lastName):
         remove_user(email)
     else:
         print("no way my guy")
-main(decision, email, nickName, lastName)
