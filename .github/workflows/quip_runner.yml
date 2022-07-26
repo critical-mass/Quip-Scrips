@@ -19,7 +19,6 @@ jobs:
         - name: Running main.py
           uses: actions/setup-python@v3
           with: 
-            ref: ${{ github.event.client_payload.ref }}
             python-version: '3.9'
         - run: pip install -r requirements.txt
         - run: python main.py
