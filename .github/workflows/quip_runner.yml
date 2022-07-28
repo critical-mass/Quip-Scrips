@@ -5,8 +5,7 @@ on:
     types: payload
 env: 
   repo_dir: Quip-Scripts
-  body: toJson(github.event.client_payload.message)
-
+  
 jobs:
     entireJob:
         name: Quip Add/Remove User Script
@@ -21,5 +20,6 @@ jobs:
           uses: actions/setup-python@v3
           with: 
             python-version: '3.9'
+            body: ${{ toJson(github.event.client_payload.message) }}
         - run: pip install -r requirements.txt
         - run: python main.py
