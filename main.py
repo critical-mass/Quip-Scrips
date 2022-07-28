@@ -8,7 +8,8 @@ decision=""
 email=""
 nickName=""
 lastName=""
-
+message=os.environ['client_payload.message']
+print(message)
       
 def main(decision, email, nickName, lastName):
     if decision == "onboard":
